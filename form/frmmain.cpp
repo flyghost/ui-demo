@@ -71,7 +71,7 @@ void frmMain::initForm()
     QFont font;
     font.setPixelSize(25);
     ui->labTitle->setFont(font);
-    ui->labTitle->setText("智能访客管理平台");
+    ui->labTitle->setText("CreekWater");
     this->setWindowTitle(ui->labTitle->text());
 
     ui->stackedWidget->setStyleSheet("QLabel{font:60px;}");
