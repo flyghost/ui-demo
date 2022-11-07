@@ -21,7 +21,7 @@ CONFIG += resources_big
 #CONFIG -= debug_and_release
 
 #引入全志H3芯片依赖
-include ($$PWD/h3.pri)
+#include ($$PWD/h3.pri)
 
 HEADERS += \
     $$PWD/appdata.h \
