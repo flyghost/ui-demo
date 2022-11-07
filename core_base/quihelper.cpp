@@ -448,16 +448,18 @@ void QUIHelper::initMain(bool on)
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
 #else
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#elif (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
     //不应用任何缩放
     QApplication::setAttribute(Qt::AA_Use96Dpi);
 #endif
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-    //高分屏缩放策略
-    QApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::Floor);
-#endif
+//#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+//    //高分屏缩放策略
+//    QApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::Floor);
+//#endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     //设置opengl模式 AA_UseDesktopOpenGL(默认) AA_UseOpenGLES AA_UseSoftwareOpenGL
