@@ -3,6 +3,11 @@
 #include "qnetworkproxy.h"
 
 #define TIMEMS qPrintable(QTime::currentTime().toString("HH:mm:ss zzz"))
+
+
+/**
+ * 获取鼠标处于哪个屏幕.
+ */
 int QUIHelper::getScreenIndex()
 {
     //需要对多个屏幕进行处理
