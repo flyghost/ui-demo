@@ -44,8 +44,8 @@ INCLUDEPATH += $$PWD
 INCLUDEPATH += $$PWD/form
 include ($$PWD/form/form.pri)
 
-INCLUDEPATH += $$PWD/core_base
-include ($$PWD/core_base/core_base.pri)
+INCLUDEPATH += $$PWD/app
+include ($$PWD/app/app.pri)
 
 INCLUDEPATH += $$PWD/ui
 include ($$PWD/ui/ui.pri)
