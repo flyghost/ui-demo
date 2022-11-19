@@ -684,6 +684,7 @@ QLabel:disabled{
 background:none;
 }
 
+/* 会通过 getQssColor 接口得到下列颜色 */
 /*TextColor:#57595B*/
 /*PanelColor:#FFFFFF*/
 /*BorderColor:#B6B6B6*/
