@@ -16,4 +16,4 @@ HEADERS += \
 
 
 # 软件图标
-RC_ICONS    = myico.ico
+RC_ICONS    = $$PWD/image/myico.ico
