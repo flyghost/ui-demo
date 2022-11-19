@@ -3,10 +3,8 @@
 RESOURCES += $$PWD/qrc/image.qrc
 RESOURCES += $$PWD/qrc/qm.qrc
 RESOURCES += $$PWD/qrc/font.qrc
-
-
-RESOURCES   += $$PWD/main.qrc
-RESOURCES   += $$PWD/qrc/qss.qrc
+RESOURCES += $$PWD/qrc/main.qrc
+RESOURCES += $$PWD/qrc/qss.qrc
 
 SOURCES += \
     $$PWD/quihelper.cpp\
