@@ -36,7 +36,7 @@ CONFIG += resources_big
 #开启后不会生成空的 debug release 目录
 #CONFIG -= debug_and_release
 
-SOURCES     += main.cpp
+#SOURCES     += main.cpp
 
 
 INCLUDEPATH += $$PWD
