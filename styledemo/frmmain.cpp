@@ -30,7 +30,7 @@ void frmMain::initForm()
     ui->ck2->setChecked(true);
     ui->ck3->setCheckState(Qt::PartiallyChecked);
 
-    ui->textEdit->setText("QQ：517216493\nWX：feiyangqingyun");
+    ui->textEdit->setText("www.creekwater.cn");
     ui->treeWidget->expandAll();
 
     int rowHeight = 23;

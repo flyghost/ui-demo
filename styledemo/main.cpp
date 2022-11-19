@@ -1,4 +1,6 @@
 ﻿#include "frmmain.h"
+#include "appinit.h"
+#include "quihelper.h"
 #include <QtCore>
 #include <QtGui>
 
@@ -12,6 +14,7 @@
 
 #pragma execution_character_set("utf-8")
 
+#if 0
 int main(int argc, char *argv[])
 {
     //设置不应用操作系统设置比如字体
@@ -44,8 +47,25 @@ int main(int argc, char *argv[])
 #endif
 
     frmMain w;
-    w.setWindowTitle("样式表示例 (QQ: 517216493 WX: feiyangqingyun)");
+    w.setWindowTitle("CreekWater)");
     w.show();    
+
+    return a.exec();
+}
+#endif
+
+int main(int argc, char *argv[])
+{
+    QUIHelper::initMain();
+    QApplication a(argc, argv);
+    AppInit::Instance()->start();
+
+    QUIHelper::setFont();
+    QUIHelper::setCode();
+
+    frmMain w;
+    QUIHelper::setFormInCenter(&w);
+    w.show();
 
     return a.exec();
 }
