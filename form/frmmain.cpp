@@ -100,7 +100,7 @@ void frmMain::initStyle()
 {
     //加载样式表
     QString qss;
-    QFile file(":/qss/blacksoft.css");
+    QFile file(":/qrc/qss/blacksoft.css");
     if (file.open(QFile::ReadOnly)) {
         qss = QLatin1String(file.readAll());
         QString paletteColor = qss.mid(20, 7);
