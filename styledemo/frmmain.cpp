@@ -1,4 +1,5 @@
 ﻿#include "frmmain.h"
+#include "quihelper.h"
 #include "ui_frmmain.h"
 #include <QtCore>
 #include <QtGui>
@@ -52,50 +53,19 @@ void frmMain::initForm()
     on_btnStyle1_clicked();
 }
 
-void frmMain::loadStyle(const QString &qssFile)
-{
-    //开启计时
-    QElapsedTimer time;
-    time.start();
-
-    //加载样式表
-    QString qss;
-    QFile file(qssFile);
-    if (file.open(QFile::ReadOnly)) {
-        //用QTextStream读取样式文件不用区分文件编码 带bom也行
-        QStringList list;
-        QTextStream in(&file);
-        //in.setCodec("utf-8");
-        while (!in.atEnd()) {
-            QString line;
-            in >> line;
-            list << line;
-        }
-
-        file.close();
-        qss = list.join("\n");
-        QString paletteColor = qss.mid(20, 7);
-        qApp->setPalette(QPalette(paletteColor));
-        //用时主要在下面这句
-        qApp->setStyleSheet(qss);
-    }
-
-    qDebug() << "用时:" << time.elapsed();
-}
-
 void frmMain::on_btnStyle1_clicked()
 {
-    loadStyle(":/qss/lightblue.css");
+    QUIHelper::loadStyle(":/qss/lightblue.css");
 }
 
 void frmMain::on_btnStyle2_clicked()
 {
-    loadStyle(":/qss/flatgray.css");
+    QUIHelper::loadStyle(":/qss/flatgray.css");
 }
 
 void frmMain::on_btnStyle3_clicked()
 {
-    loadStyle(":/qss/blacksoft.css");
+    QUIHelper::loadStyle(":/qss/blacksoft.css");
 }
 
 void frmMain::on_btnInfo_clicked()

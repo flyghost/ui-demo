@@ -20,7 +20,6 @@ private:
 
 private slots:
     void initForm();
-    void loadStyle(const QString &qssFile);
 
 private slots:
     void on_btnStyle1_clicked();

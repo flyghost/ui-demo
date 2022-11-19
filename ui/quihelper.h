@@ -62,6 +62,8 @@ public:
     //延时
     static void sleep(int msec);
 
+    // 加载样式表
+    static void loadStyle(const QString &qssFile);
     //设置Qt自带样式
     static void setStyle();
     //设置字体

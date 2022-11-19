@@ -321,6 +321,37 @@ void QUIHelper::sleep(int msec)
 #endif
 }
 
+void QUIHelper::loadStyle(const QString &qssFile)
+{
+    //开启计时
+    QElapsedTimer time;
+    time.start();
+
+    //加载样式表
+    QString qss;
+    QFile file(qssFile);
+    if (file.open(QFile::ReadOnly)) {
+        //用QTextStream读取样式文件不用区分文件编码 带bom也行
+        QStringList list;
+        QTextStream in(&file);
+        //in.setCodec("utf-8");
+        while (!in.atEnd()) {
+            QString line;
+            in >> line;
+            list << line;
+        }
+
+        file.close();
+        qss = list.join("\n");
+        QString paletteColor = qss.mid(20, 7);
+        qApp->setPalette(QPalette(paletteColor));
+        //用时主要在下面这句
+        qApp->setStyleSheet(qss);
+    }
+
+    qDebug() << "用时:" << time.elapsed();
+}
+
 void QUIHelper::setStyle()
 {
     //打印下所有内置风格的名字
