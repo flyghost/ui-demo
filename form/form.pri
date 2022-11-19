@@ -5,6 +5,6 @@ HEADERS += \
     $$PWD/frmmain.h
 
 SOURCES += \
-    $$PWD/frmmain.cpp \
+    $$PWD/frmmain.cpp
 
 SOURCES     += $$PWD/main.cpp
