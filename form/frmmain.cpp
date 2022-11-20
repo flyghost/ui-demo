@@ -4,6 +4,7 @@
 #include "ui_frmmain.h"
 #include "iconhelper.h"
 #include "quihelper.h"
+#include <QDebug>
 
 frmMain::frmMain(QWidget *parent) : QWidget(parent), ui(new Ui::frmMain)
 {
@@ -98,6 +99,10 @@ void frmMain::initForm()
 
 void frmMain::initStyle()
 {
+    // QUIHelper::loadStyle(":/qss/lightblue.css");
+    // QUIHelper::loadStyle(":/qss/flatgray.css");
+    // QUIHelper::loadStyle(":/qss/blacksoft.css");
+
     //加载样式表
     QString qss;
     QFile file(":/qss/blacksoft.css");
