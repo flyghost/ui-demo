@@ -40,8 +40,6 @@ CONFIG += resources_big
 
 
 INCLUDEPATH += $$PWD
-INCLUDEPATH += $$PWD/form
-include ($$PWD/form/form.pri)
 
 INCLUDEPATH += $$PWD/app
 include ($$PWD/app/app.pri)
@@ -49,3 +47,8 @@ include ($$PWD/app/app.pri)
 INCLUDEPATH += $$PWD/ui
 include ($$PWD/ui/ui.pri)
 
+INCLUDEPATH += $$PWD/form
+include ($$PWD/form/form.pri)
+
+#INCLUDEPATH += $$PWD/styledemo
+#include ($$PWD/styledemo/styledemo.pri)
